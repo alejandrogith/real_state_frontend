@@ -1,0 +1,90 @@
+@import "styles/utils.scss";
+
+.nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-weight: 500;
+
+  &__list_left {
+    flex: 3;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    gap: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+
+    transition: all 0.4s ease-in;
+
+    &:hover {
+      scale: 1.05;
+    }
+
+    &-text {
+      @include md {
+        display: none;
+      }
+
+      @include sm {
+        display: block;
+      }
+    }
+  }
+
+  &__img {
+    width: 28px;
+  }
+
+  &__list_right {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+    background-color: #fcf5f3;
+    height: 100%;
+
+    @include sm {
+      background-color: transparent;
+    }
+  }
+
+  &__link--register {
+    background-color: #fece51;
+    padding: 12px 24px;
+    border-radius: 10px;
+  }
+
+  &__item {
+    transition: all 0.4s ease-in;
+
+    @include sm {
+      display: none;
+    }
+
+    &:hover {
+      scale: 1.05;
+    }
+
+    &--sidebar {
+      display: none;
+      cursor: pointer;
+      @include sm {
+        display: block;
+      }
+
+      .nav__img {
+        width: 40px;
+      }
+    }
+  }
+}

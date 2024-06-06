@@ -7,9 +7,9 @@ import {
   OnInit,
 } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from './Layout/Componentes/navbar/navbar.component';
-import { SidebarComponent } from './Layout/Componentes/sidebar/sidebar.component';
-import { FooterComponent } from './Layout/Componentes/footer/footer.component';
+import { NavbarComponent } from './Layout/Components/navbar/navbar.component';
+import { SidebarComponent } from './Layout/Components/sidebar/sidebar.component';
+import { FooterComponent } from './Layout/Components/footer/footer.component';
 
 @Component({
   selector: 'app-root',

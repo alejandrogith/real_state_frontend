@@ -53,3 +53,59 @@ $shadow-4: 0px 10px 20px 0px #0000001a;
 $transition-easing-quick: cubic-bezier(0, 0.7, 0.3, 1);
 $transition-duration-quick: 200ms;
 $transition-duration-smooth: 500ms;
+
+//Mixins
+@mixin headline-large {
+  font-size: $fs-headline-large;
+  line-height: $lh-headline-large;
+  font-weight: $weight-bold;
+  letter-spacing: $traking-n-025;
+}
+
+@mixin headline-medium {
+  font-size: $fs-headline-medium;
+  line-height: $lh-headline-medium;
+  font-weight: $weight-bold;
+}
+
+@mixin headline-small {
+  font-size: $fs-headline-small;
+  line-height: $lh-headline-small;
+  font-weight: $weight-bold;
+}
+
+@mixin title-large {
+  font-size: $fs-title-large;
+  line-height: $lh-title-large;
+  font-weight: $weight-semiBold;
+}
+@mixin title-medium {
+  font-size: $fs-title-medium;
+  line-height: $lh-title-medium;
+  font-weight: $weight-semiBold;
+}
+
+@mixin title-small {
+  font-size: $fs-title-small;
+  line-height: $lh-title-small;
+  font-weight: $weight-semiBold;
+}
+
+@mixin body-large {
+  font-size: $fs-body-large;
+  line-height: $lh-body-large;
+  font-weight: $weight-regular;
+}
+
+@mixin body-medium {
+  font-size: $fs-body-medium;
+  line-height: $lh-body-medium;
+  font-weight: $weight-regular;
+}
+
+@mixin label-medium {
+  font-size: $sfs-label-medium;
+  line-height: $lh-label-medium;
+  font-weight: $weight-semiBold;
+  letter-spacing: $traking-p-05;
+}

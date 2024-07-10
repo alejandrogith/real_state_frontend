@@ -1,0 +1,41 @@
+<header class="header" #header>
+  <div class="header__container">
+    <a href="#" class="header__wrapper">
+      <figure>
+        <img
+          src="assets/images/logo.png"
+          alt="wealthome"
+          class="header__logo"
+        />
+      </figure>
+    </a>
+
+    <nav class="navbar" #navbar>
+      <ul class="navbar__list">
+        <li>
+          <a href="#" class="navbar__link">Home</a>
+        </li>
+        <li>
+          <a href="#" class="navbar__link">Rent</a>
+        </li>
+        <li>
+          <a href="#" class="navbar__link">Sell</a>
+        </li>
+        <li>
+          <a href="#" class="navbar__link">Buy</a>
+        </li>
+        <li>
+          <a href="#" class="navbar__link">About</a>
+        </li>
+      </ul>
+      <div class="navbar__wrapper">
+        <a class="navbar__btn navbar__btn--login">Login</a>
+        <a class="navbar__btn navbar__btn--register">Get Started</a>
+      </div>
+    </nav>
+
+    <button class="navbar__toggle" (click)="toggleNavbar()">
+      <i class="fa-solid fa-bars fa-lg"></i>
+    </button>
+  </div>
+</header>

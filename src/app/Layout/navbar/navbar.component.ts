@@ -19,21 +19,22 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent implements OnInit, AfterViewInit {
-  @ViewChild('navlist') navlist_Element!: ElementRef;
+  @ViewChild('navbar') nav_Element!: ElementRef;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private render: Renderer2) {}
 
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {}
 
   toggleNavbar() {
-    const element: Element = this.navlist_Element.nativeElement;
+    const element = this.nav_Element.nativeElement;
+    if (element !== null && element instanceof HTMLElement) {
+      const hasclass = element.classList.contains('navbar--active');
 
-    const hasclass: boolean = element.classList.contains('nav__list--active');
-
-    hasclass
-      ? this.renderer.removeClass(element, 'nav__list--active')
-      : this.renderer.addClass(element, 'nav__list--active');
+      hasclass
+        ? this.render.removeClass(element, 'navbar--active')
+        : this.render.addClass(element, 'navbar--active');
+    }
   }
 }

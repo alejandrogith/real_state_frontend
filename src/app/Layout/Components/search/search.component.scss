@@ -1,0 +1,72 @@
+@import "styles/typograpy.scss";
+@import "styles/colors.scss";
+@import "styles/mixins.scss";
+
+.search {
+  background: var(--white);
+  display: grid;
+  padding: 8px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-4);
+
+  &__item {
+    position: relative;
+    color: var(--neutral-50);
+  }
+
+  &__label {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    @include label-medium;
+
+    color: var(--neutral-5);
+  }
+
+  &__input {
+    @include body-medium;
+
+    height: 76px;
+    padding: 40px 16px 12px;
+    border-radius: var(--radius-medium);
+    transition: var(--transition-duration-quick) var(--transition-easing-quick);
+    cursor: pointer;
+
+    &:where(:hover, :focus) {
+      background-color: var(--neutral-95);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    translate: 0 -50%;
+    color: var(--primary-100);
+  }
+
+  &__btn {
+    background: var(--primary-100);
+    color: var(--neutral-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    padding: 0 24px;
+    gap: 12px;
+    border-radius: 12px;
+    transition: var(--transition-duration-quick) var(--transition-easing-quick);
+
+    &:where(:hover, :focus) {
+      background-color: var(--primary-80);
+    }
+
+    &:where(:active, :focus-visible) {
+      background-color: var(--primary-70);
+    }
+  }
+
+  &__info {
+    @include label-medium;
+  }
+}

@@ -1,0 +1,24 @@
+@import "styles/typograpy.scss";
+@import "styles/colors.scss";
+@import "styles/mixins.scss";
+
+.hero {
+  @include container;
+
+  position: relative;
+  background-image: var(--gradient);
+  color: var(--neutral-90);
+  padding-block: 80px 60px;
+  overflow: hidden;
+  isolation: isolate;
+
+  &__title {
+    @include headline-large;
+
+    color: var(--neutral-100);
+  }
+
+  &__text {
+    margin-block: 16px 32px;
+  }
+}

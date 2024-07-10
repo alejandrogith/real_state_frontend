@@ -1,25 +1,18 @@
-import { DOCUMENT, JsonPipe } from '@angular/common';
-import {
-  AfterViewInit,
-  Component,
-  INJECTOR,
-  Inject,
-  OnInit,
-} from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from './Layout/Components/navbar/navbar.component';
-import { SidebarComponent } from './Layout/Components/sidebar/sidebar.component';
-import { FooterComponent } from './Layout/Components/footer/footer.component';
+import { NavbarComponent } from './Layout/navbar/navbar.component';
+
+import { FooterComponent } from './Layout/footer/footer.component';
+import { HomeComponent } from './Layout/home/home.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, SidebarComponent, FooterComponent],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent, HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  constructor(@Inject(DOCUMENT) private dom: Document) {}
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {}

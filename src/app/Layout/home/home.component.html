@@ -1,34 +1,24 @@
 <section class="hero">
-  <div class="hero__content">
-    <h1 class="hero__title">Find your next stay</h1>
-    <p class="hero__text">Search deals on hotels, homes, and much more...</p>
+  <div class="hero__container">
+    <div class="hero__content">
+      <h1 class="hero__title">
+        Find your next stay where you can be yourself.
+      </h1>
+      <p class="hero__text">Search deals on hotels, homes, and much more...</p>
+    </div>
+
+    <div class="hero__content hero__content--search">
+      <app-search />
+    </div>
+
+    <img
+      width="816"
+      height="659"
+      src="assets/images/hero.png"
+      alt=""
+      class="hero__banner"
+    />
   </div>
-
-  <app-search />
-
-  <br />
 </section>
 
-<section class="popularity">
-  <h2 class="">Most populars</h2>
-
-  <ul class="categorylist">
-    <li>
-      <div class="card">
-        <div class="card__header">
-          <figure>
-            <img src="" alt="" class="card__img" />
-          </figure>
-        </div>
-        <div class="card__body">
-          sp
-
-          <p class="card__text">Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="card__footer card__footer--highlighted">
-          <button class="card__button">Click me</button>
-        </div>
-      </div>
-    </li>
-  </ul>
-</section>
+<app-property-list />

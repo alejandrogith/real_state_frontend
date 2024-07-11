@@ -76,12 +76,11 @@
   }
 
   &__btn {
-    border-block-start: 1px solid var(--neutral-90);
-
     padding: 12px 12px;
 
     &--login {
       @include label-medium;
+      border-block-start: 1px solid var(--neutral-90);
     }
 
     &--register {
@@ -95,5 +94,48 @@
 
   &__toggle {
     @include icon-btn;
+  }
+}
+
+@include mediaQuery_992px {
+  .navbar,
+  .navbar__list,
+  .navbar__wrapper {
+    all: unset;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar {
+    flex-grow: 1;
+
+    &__toggle {
+      display: none;
+    }
+
+    &__list {
+      flex-grow: 1;
+      justify-content: center;
+    }
+
+    &__link {
+      color: var(--neutral-100);
+      padding: 0 24px;
+    }
+
+    &__btn {
+      &--login {
+        border: none;
+        color: var(--neutral-100);
+      }
+
+      &--register {
+        min-width: max-content;
+      }
+    }
+
+    &__wrapper {
+      gap: 14px;
+    }
   }
 }

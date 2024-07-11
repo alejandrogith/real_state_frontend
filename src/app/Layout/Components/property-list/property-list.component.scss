@@ -1,0 +1,143 @@
+@import "styles/typograpy.scss";
+@import "styles/colors.scss";
+@import "styles/mixins.scss";
+
+.property {
+  padding-bottom: 60px;
+
+  &__container {
+    @include container;
+  }
+
+  &__header {
+    margin: 30px 0;
+  }
+
+  &__title {
+    @include headline-small;
+  }
+
+  &__info {
+    @include body-large;
+  }
+}
+
+.property-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  border-radius: var(--radius-large);
+  overflow: hidden;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+
+  cursor: pointer;
+
+  &:where(:hover, :focus-within) {
+    box-shadow: var(--shadow-4);
+  }
+
+  &__imgholder {
+    aspect-ratio: 585 / 390;
+    background-color: var(--neutral-80);
+    overflow: hidden;
+  }
+
+  &__img {
+    @include img-cover;
+    transition: var(--transition-duration-smooth) var(--transition-easing-quick);
+  }
+
+  &:where(:hover, :focus-within) &__img {
+    scale: 1.05;
+    rotate: 2deg;
+  }
+
+  &__badge {
+    @include label-medium;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    height: 32px;
+    max-width: max-content;
+    display: grid;
+    place-items: center;
+    padding-inline: 16px;
+    background-color: var(--secondary-100);
+    border-radius: var(--radius-small);
+    box-shadow: var(--shadow-3);
+  }
+
+  &__favorite {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    @include icon-btn;
+    color: var(--error-100);
+    cursor: pointer;
+  }
+
+  &__banner {
+    position: relative;
+  }
+
+  &__content {
+    padding: 20px 20px 24px;
+  }
+  &__price {
+    @include title-large;
+  }
+
+  &__title {
+    @include title-small;
+    margin-block: 8px;
+    color: var(--neutral-20);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: var(--transition-duration-quick) var(--transition-easing-quick);
+    cursor: pointer;
+
+    &:where(:hover, :focus-visible) {
+      color: var(--primary-100);
+    }
+  }
+
+  &__text {
+    @include body-medium;
+    color: var(--neutral-40);
+  }
+
+  &__metalist {
+    padding-block-start: 16px;
+    margin-block-start: 16px;
+    border-block-start: 3px solid var(--neutral-90);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__metaitem {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--neutral-20);
+  }
+
+  &__metainfo {
+    @include label-medium;
+  }
+}
+
+@include mediaQuery_768px {
+  .property {
+    padding-block-start: 30px;
+  }
+}

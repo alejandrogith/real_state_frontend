@@ -1,3 +1,5 @@
+@import "mixins";
+
 :root {
   //Font family
   --font-primary: "Montserrat", sans-serif;
@@ -55,7 +57,7 @@
   --transition-duration-quick: 200ms;
   --transition-duration-smooth: 500ms;
 
-  --max_width: 580px;
+  --container_max_width: 580px;
 }
 
 //Mixins
@@ -114,40 +116,35 @@
   letter-spacing: var(--traking-p-05);
 }
 
-/*
-  responsive for larger than 768px screen
-  */
-@media (min-width: 768px) {
+@include mediaQuery_768px {
   :root {
+    //  Font size
     --fs-headline-large: 5.2rem;
     --fs-headline-medium: 4rem;
     --fs-headline-small: 3.6rem;
 
+    //   Line height
     --lh-headline-large: 64px;
     --lh-headline-medium: 52px;
     --lh-headline-small: 48px;
 
-    --max_width: 720px;
+    --container_max_width: 720px;
   }
 }
 
-/*
-  responsive for larger than 992px screen
-  */
-@media (min-width: 992px) {
+@include mediaQuery_992px {
   :root {
+    //  Font size
     --fs-body-large: 1.8rem;
 
+    //   Line height
     --lh-body-large: 32px;
 
-    --max_width: 950px;
+    --container_max_width: 950px;
   }
 }
 
-/*
-  responsive for larger than 1440px screen
-  */
-@media (min-width: 992px) {
+@include mediaQuery_1440px {
   :root {
     --fs-headline-large: 7.2rem;
     --fs-headline-medium: 5.4rem;
@@ -155,6 +152,6 @@
     --lh-headline-large: 92px;
     --lh-headline-medium: 72px;
 
-    --max_width: 1460px;
+    --container_max_width: 1460px;
   }
 }

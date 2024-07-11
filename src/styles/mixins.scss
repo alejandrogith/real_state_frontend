@@ -2,35 +2,37 @@
     Mixins
 */
 
-@mixin sm {
-  @media (max-width: 768px) {
+@mixin mediaQuery_768px {
+  @media (min-width: 768px) {
     @content;
   }
 }
 
-@mixin md {
-  @media (max-width: 1024px) {
+@mixin mediaQuery_992px {
+  @media (min-width: 992px) {
     @content;
   }
 }
 
-@mixin lg {
-  @media (max-width: 1366px) {
+@mixin mediaQuery_1440px {
+  @media (min-width: 1440px) {
     @content;
   }
 }
 
 @mixin container {
   padding: 0 16px;
-  max-width: var(--max_width);
+  max-width: var(--container_max_width);
   width: 100%;
   margin: 0 auto;
 }
 
+// BORRAR
 @mixin section {
   padding-block-end: 60px;
 }
 
+// BORRAR
 @mixin title-wrapper {
   margin-block-end: 32px;
 }
